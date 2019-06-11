@@ -80,3 +80,10 @@
       font-weight: 600;
       font-size: 1.2rem;
   }
+
+  .mat-grid-tile__data {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+    //   width: 100%;
+  }
