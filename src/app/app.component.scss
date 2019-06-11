@@ -1,0 +1,82 @@
+
+  
+  .nav-bar {
+    display: initial;
+    justify-content: center;
+  }
+  
+  .img__coca {
+    height: 80px;
+    margin: 2% 0 0 2%;
+  }
+  
+  .nav-shopping-cart {
+    float: right;
+    padding: 2% 0;  
+  }
+  
+  label {
+    font-weight: 500;
+    margin: 0 10px 0 10px;
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  .mat-mini-fab__shopping-cart {
+    background-color: #333333;
+  }
+  
+  .mat-icon__shop {
+    color: #fff;
+  }
+
+  .img__product {
+    right: 3rem;
+    height: 100px;
+    position: relative;
+  }
+
+.div__product {
+    //   border-radius: 25% !important;
+      background-color: #ffeaea;
+      float: left;
+      width: -webkit-fill-available;
+      font-family: 'Quicksand', sans-serif;
+
+  }
+
+  .div__product {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap !important;
+    flex-direction: column !important;
+}
+
+.div__product:hover {
+      background-color: #988cff !important;
+  }
+
+  .subheader {
+      min-height: 120px;
+  }
+
+  .subheader-span {
+      float: right;
+      margin-right: 20px;
+      color: #333333;
+      font-size: 50px;
+      font-family: 'Fredoka One';
+  }
+
+  .subtitle__product {
+      font-weight: 600;
+      font-size: 1.2rem;
+  }
