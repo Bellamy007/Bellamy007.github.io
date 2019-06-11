@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule, MatCheckboxModule, MatToolbarModule, MatIconModule, MatCardModule, MatGridListModule} from '@angular/material';
+import {MatBadgeModule} from '@angular/material/badge';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import {MatButtonModule, MatCheckboxModule, MatToolbarModule, MatIconModule, Mat
     MatIconModule,
     MatCardModule,
     MatGridListModule,
+    MatBadgeModule,
     HttpClientModule
   ],
   exports: [
