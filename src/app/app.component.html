@@ -2,7 +2,7 @@
   <img src="../assets/coca-cola.png" alt="" class="img__coca">
   <div class="nav-shopping-cart">
     <button mat-mini-fab class="mat-mini-fab__shopping-cart">
-      <mat-icon class="mat-icon__shop">add_shopping_cart</mat-icon>
+      <mat-icon matBadge="{{ counter }}" matBadgeColor="warn" class="mat-icon__shop">add_shopping_cart</mat-icon>
     </button>
     <!-- <label class="nav-shopping-cart__label">MI CARRITO</label> -->
   </div>
@@ -11,34 +11,19 @@
   <span class="subheader-span">Destapa la felicidad</span>
 </div>
 <mat-grid-list cols="4" rowHeight="100px" [gutterSize]="'1rem'">
-  <mat-grid-tile >
-    <div class="div__product">
+  <mat-grid-tile *ngFor="let prod of products" >
+    <div class="div__product" (click)="addProd(prod)">
       <div>
         <img class="img__product" src="../assets/default-img.svg" alt="">
       </div>
       <div class="mat-grid-tile__data">
-        <span class="subtitle__product">Coca-Cola Classic</span>
-        <span>$12.30</span>
+        <span class="subtitle__product">{{ prod.description }}</span>
+        <span>{{ prod.unitPrice }}</span>
       </div>
     </div>
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <div class="div__product">
-      <img class="img__product" src="../assets/default-img.svg" alt="">
-    </div>
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <div class="div__product">
-      <img class="img__product" src="../assets/default-img.svg" alt="">
-    </div>
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <div class="div__product">
-      <img class="img__product" src="../assets/default-img.svg" alt="">
-    </div>
-  </mat-grid-tile>
+  </mat-grid-tile> 
 </mat-grid-list>
-
+{{ listCart | json}}
 <!-- <mat-card>
             
           </mat-card> -->
