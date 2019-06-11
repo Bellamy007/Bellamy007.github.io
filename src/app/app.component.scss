@@ -23,6 +23,7 @@
   
   .mat-mini-fab__shopping-cart {
     background-color: #333333;
+    margin: 0 2rem 0;
   }
   
   .mat-icon__shop {
@@ -37,11 +38,11 @@
 
 .div__product {
     //   border-radius: 25% !important;
-      background-color: #ffeaea;
-      float: left;
-      width: -webkit-fill-available;
-      font-family: 'Quicksand', sans-serif;
-
+    background-color: rgb(255, 242, 242);
+    float: left;
+    width: -webkit-fill-available;
+    font-family: 'Quicksand', sans-serif;
+    box-shadow: #333333;
   }
 
   .div__product {
@@ -56,12 +57,14 @@
     height: 100%;
     padding: 0;
     margin: 0;
-    flex-wrap: wrap !important;
-    flex-direction: column !important;
+    flex-wrap: wrap;
+    // flex-direction: column;
+    border-radius: 2rem
 }
 
 .div__product:hover {
-      background-color: #988cff !important;
+      background-color: #333333 !important;
+      color: #fff
   }
 
   .subheader {
@@ -82,8 +85,8 @@
   }
 
   .mat-grid-tile__data {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: column;
-    //   width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center
   }

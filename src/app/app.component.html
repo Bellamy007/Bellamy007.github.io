@@ -10,16 +10,17 @@
 <div class="subheader">
   <span class="subheader-span">Destapa la felicidad</span>
 </div>
-<mat-grid-list cols="3" rowHeight="100px">
-  <mat-grid-tile class="div__product">
-    <div>
-      <img class="img__product" src="../assets/default-img.svg" alt="">
-    </div>
-    <div class="mat-grid-tile__data">
+<mat-grid-list cols="4" rowHeight="100px" [gutterSize]="'1rem'">
+  <mat-grid-tile >
+    <div class="div__product">
+      <div>
+        <img class="img__product" src="../assets/default-img.svg" alt="">
+      </div>
+      <div class="mat-grid-tile__data">
         <span class="subtitle__product">Coca-Cola Classic</span>
         <span>$12.30</span>
+      </div>
     </div>
-    
   </mat-grid-tile>
   <mat-grid-tile>
     <div class="div__product">
