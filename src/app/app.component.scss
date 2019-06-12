@@ -6,10 +6,26 @@
   }
   
   .img__coca {
-    height: 80px;
+    height: 85px;
     margin: 2% 0 0 2%;
   }
   
+  .mat-icon__add_circle {
+    float: right;
+    font-size: 1.8rem;
+    color: #634AEF;
+    // position: relative;
+  }
+
+  .mat-icon__remove_circle {
+    float: left;
+    font-size: 1.8rem;
+    color: #634AEF;
+    // position: relative;
+  }
+
+  
+
   .nav-shopping-cart {
     float: right;
     padding: 2% 0;  
@@ -32,39 +48,48 @@
 
   .img__product {
     right: 3rem;
-    height: 100px;
-    position: relative;
-  }
-
-.div__product {
-    //   border-radius: 25% !important;
-    background-color: rgb(255, 242, 242);
-    float: left;
-    width: -webkit-fill-available;
-    font-family: 'Quicksand', sans-serif;
-    box-shadow: #333333;
+    height: 80px;
+    margin: 0 1rem 0;
   }
 
   .div__product {
+    background-color: rgb(255, 242, 242, .8);
+    float: left;
+    width: 90%;
+    font-family: 'Quicksand', sans-serif;
+    box-shadow: #333333;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
+    height: 90%;
+    padding: 0;
+    margin: 0;
     position: absolute;
     display: flex;
     align-items: left;
     justify-content: center;
-    height: 100%;
-    padding: 0;
-    margin: 0;
     flex-wrap: wrap;
-    // flex-direction: column;
-    border-radius: 2rem
+    flex-direction: column;
+    border-radius: 2rem;
+    
 }
 
 .div__product:hover {
       background-color: #333333 !important;
-      color: #fff
+      color: #fff !important;
+      height: 100%;
+      width: 100%;
+      span {
+          color: #fff;
+      }
+      mat-icon {
+          color: #8C8EFF;
+          cursor:pointer;
+      }
+      input {
+          color: #fff;
+      }
   }
 
   .subheader {
@@ -82,6 +107,7 @@
   .subtitle__product {
       font-weight: 600;
       font-size: 1.2rem;
+      margin: 1rem 0 1rem 0;
   }
 
   .mat-grid-tile__data {
@@ -89,4 +115,24 @@
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: center
+  }
+
+  .price__product {
+      font-size: 1.4rem;
+      color: #333333;
+  }
+
+  .quantity_products {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  mat-form-field {
+    display: block;
+    position: relative;
+    flex: auto;
+    min-width: 0;
+    max-width: 40px !important;
   }
