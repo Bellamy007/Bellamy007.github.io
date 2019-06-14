@@ -1,0 +1,22 @@
+<div class="row nav-bar">
+  <img src="../assets/logosoda.svg" alt="" class="img__coca">
+  <div class="nav-shopping-cart">
+    <button mat-raised-button class="">
+      Seguir comprando
+    </button>
+  </div>
+</div>
+<div class="subheader">
+  <span class="subheader-span">Destapa la felicidad</span>
+</div>
+<form class="example-form">
+  <mat-grid-list cols="3" rowHeight="120px" [gutterSize]="'1rem'">
+    <mat-grid-tile *ngFor="let prod of products let i = index">
+        <div class="div__product">
+          <div>
+            <img class="img__product" src="../assets/default-img.svg" alt="">
+          </div>
+        </div>
+    </mat-grid-tile> 
+  </mat-grid-list>
+</form>

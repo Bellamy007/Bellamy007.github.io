@@ -13,6 +13,7 @@ export class AppComponent  implements OnInit {
   products: Observable<Array<any>>;
   counter: number;
   shoppingCart: Product[] = [];
+  showShoppingCart = false;
   ngOnInit() {
     this.getProducts();
   }
@@ -40,5 +41,9 @@ export class AppComponent  implements OnInit {
       alert('El producto ya fue agregado anteriormente');
     }
     console.log(this.shoppingCart);
+  }
+
+  toggleShoppingCart(): void {
+    this.showShoppingCart = !this.showShoppingCart;
   }
 }

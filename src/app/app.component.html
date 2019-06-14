@@ -1,18 +1,19 @@
 <div class="row nav-bar">
   <img src="../assets/logosoda.svg" alt="" class="img__coca">
-  <div class="nav-shopping-cart">
-    <button mat-mini-fab class="mat-mini-fab__shopping-cart">
+  <div class="nav-shopping-cart" [ngClass]="showShoppingCart ? 'hide' : ''">
+    <button (click)="toggleShoppingCart()" mat-mini-fab class="mat-mini-fab__shopping-cart">
       <mat-icon matBadge="{{ counter }}" matBadgeColor="warn" class="mat-icon__shop">add_shopping_cart</mat-icon>
     </button>
-    <!-- <label class="nav-shopping-cart__label">MI CARRITO</label> -->
   </div>
 </div>
+
 <div class="subheader">
   <span class="subheader-span">Destapa la felicidad</span>
 </div>
+
 <form class="example-form">
   <mat-grid-list cols="3" rowHeight="120px" [gutterSize]="'1rem'">
-    <mat-grid-tile *ngFor="let prod of products">
+    <mat-grid-tile *ngFor="let prod of products let i = index">
       <div class="div__product">
         <div>
           <img class="img__product" src="../assets/default-img.svg" alt="">
@@ -23,27 +24,67 @@
             <span class="price__product">${{ prod.unitPrice }}</span>
             <mat-icon class="mat-icon__remove_circle">remove_circle</mat-icon>
             <mat-form-field>
-              <input matInput type="number" class="input__products">
+              <input matInput type="number"  class="input__products">
             </mat-form-field>
-            <mat-icon class="mat-icon__add_circle" (click)="addProd(prod)">add_circle</mat-icon>
+            <mat-icon class="mat-icon__add_circle" (click)="addProd(prod, i)">add_circle</mat-icon>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-    </mat-grid-tile>
-  </mat-grid-list>
-</form>
-{{ listCart | json}}
-=======
-      <div class="mat-grid-tile__data">
-        <span class="subtitle__product">{{ prod.description }}</span>
-        <span>{{ prod.unitPrice }}</span>
-      </div>
-    </div>
   </mat-grid-tile> 
 </mat-grid-list>
 {{ shoppingCart | json}}
->>>>>>> 316497c1b65795dc2ffab9000234e683774b4c63
-<!-- <mat-card>
-            
-          </mat-card> -->
+</form>
+
+
+<div class="bg-overlay" [ngClass]="showShoppingCart ? '' : 'hide'">
+</div>
+<div class="shopping-cart-overlay" [ngClass]="showShoppingCart ? '' : 'overlay-close'">
+  <div style="margin:26px">
+    <div class="row nav-bar">
+        <div class="nav-shopping-cart">
+          <button (click)="toggleShoppingCart()" mat-raised-button class="button__back">
+            Seguir comprando
+          </button>
+        </div>
+      </div>
+      <!-- <div class="subheader">
+      </div> -->
+      <form class="example-form">
+        <div class="block-supreme">
+          <div class="block_mat-grid-list">
+              <mat-grid-list cols="2" rowHeight="120px" [gutterSize]="'1rem'">
+                  <mat-grid-tile *ngFor="let prod of products let i = index">
+                      <div class="div__product">
+                          <div>
+                            <img class="img__product" src="../assets/default-img.svg" alt="">
+                          </div>
+                          <div class="mat-grid-tile__data">
+                            <span class="subtitle__product">{{ prod.description }}</span>
+                            <div class="quantity_products">
+                              <span class="price__product">${{ prod.unitPrice }}</span>
+                              <mat-icon class="mat-icon__remove_circle">remove_circle</mat-icon>
+                              <mat-form-field>
+                                <input matInput type="number"  class="input__products">
+                              </mat-form-field>
+                              <mat-icon class="mat-icon__add_circle" (click)="addProd(prod, i)">add_circle</mat-icon>
+                            </div>
+                          </div>
+                        </div>
+                  </mat-grid-tile> 
+                </mat-grid-list>
+          </div>
+          <div class="block_total-cost">
+            <span>Resumen de orden</span>
+          </div>
+        </div>
+      </form>
+      </div>
+</div>
+
+
+
+
+
+
+<!-- 
+ -->
