@@ -1,0 +1,40 @@
+{
+   "products":[
+        {
+            "productId": 1,
+            "description": "Coca-Cola de 600ml",
+            "sku": "E7KS3",
+            "unitPrice": 9.8
+        },
+        {
+            "productId": 2,
+            "description": "Coca-Cola de 1000ml",
+            "sku": "E7KS3",
+            "unitPrice": 20
+        },
+        {
+            "productId": 3,
+            "description": "Coca-Cola 3 litros",
+            "sku": "E7KS3",
+            "unitPrice": 30
+        },
+        {
+            "productId": 4,
+            "description": "Coca-Cola de 600ml",
+            "sku": "E7KS3",
+            "unitPrice": 9.8
+        },
+        {
+            "productId": 5,
+            "description": "Coca-Cola de 1000ml",
+            "sku": "E7KS3",
+            "unitPrice": 20
+        },
+        {
+            "productId": 6,
+            "description": "Coca-Cola 3 litros",
+            "sku": "E7KS3",
+            "unitPrice": 30
+        }
+    ]
+}
