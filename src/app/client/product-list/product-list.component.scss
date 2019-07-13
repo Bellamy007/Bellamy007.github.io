@@ -1,0 +1,214 @@
+
+  
+  .nav-bar {
+    display: initial;
+    justify-content: center;
+
+    .img__coca {
+      height: 85px;
+      margin: 2% 0 0 2%;
+    }
+
+    .nav-shopping-cart {
+      float: right;
+      padding: 2% 0;
+      transition: opacity ease-in 300ms;
+
+      .mat-mini-fab__shopping-cart {
+        background-color: #333333;
+        margin: 0 2rem 0; 
+  
+        .mat-icon__shop {
+          color: #fff;
+        }
+      }
+    }
+
+    
+  }
+  
+  .subheader {
+    min-height: 120px;
+
+    span {
+      float: right;
+      margin-right: 20px;
+      color: #333333;
+      font-size: 50px;
+      font-family: 'Fredoka One';
+    }
+  }
+
+  .div__product {
+    background-color: rgb(255, 242, 242, .8);
+    float: left;
+    width: 90%;
+    font-family: 'Quicksand', sans-serif;
+    box-shadow: #333333;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 90%;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-radius: 2rem;
+    transition: all 0.3s ease-in;
+
+    .img__product {
+      right: 3rem;
+      height: 80px;
+      margin: 0 1rem 0;
+    }
+
+    .mat-grid-tile__data {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+  
+      .subtitle__product {
+        font-weight: 600;
+        font-size: 1.4rem;
+        margin: 2rem 0 1rem 0;
+      }
+  
+      .quantity_products {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+  
+        .price__product {
+          font-size: 1.8rem;
+          color: #333333;
+          transition: all 0.3s ease-out;
+        }
+
+        .mat-icon__remove_circle {
+          float: left;
+          font-size: 1.8rem;
+          color: #634AEF;
+          // position: relative;
+        }
+    
+        mat-form-field {
+          display: block;
+          position: relative;
+          flex: auto;
+          min-width: 0;
+          max-width: 60px !important;
+  
+          input {
+            text-align: center;
+          }
+  
+          input[type=number]::-webkit-inner-spin-button,
+          input[type=number]::-webkit-outer-spin-button {
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            margin: 0;
+          }
+
+          input[type=number] {
+            -moz-appearance: textfield;
+            appearance: none;
+          }
+        }
+
+        .mat-icon__add_circle {
+          float: right;
+          font-size: 1.8rem;
+          color: #634AEF;
+          // position: relative;
+        }
+
+      }
+    }
+    
+  }
+
+  .div__product:hover {
+      background-color: #333333 !important;
+      color: #fff !important;
+      height: 100%;
+      width: 100%;
+      transition: all 0.3s ease-out;
+      .price__product {
+          color: #fff !important;
+          transition: all 0.3s ease-out;
+      }
+      mat-icon {
+          color: #8C8EFF;
+          cursor:pointer;
+      }
+      input {
+          color: #fff;
+      }
+  }
+
+  .bg-overlay {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff99;
+    transition: all ease-out 0.3s;
+  }
+
+  .shopping-cart-overlay {
+    background: #634AEF99;
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    z-index: 20;
+    left: 0%;
+    width: 100%;
+    height:100%;
+    transition: all ease-out 300ms;
+  }
+
+  .overlay-close {
+    left: 100%;
+    opacity: 0;
+    transition: all ease-in 300ms;
+  }
+
+  .hide {
+    z-index: -1;
+    opacity: 0;
+    transition: all ease-in 300ms;
+  }
+
+
+  .button__back {
+    background-color: #333333;
+    color: #fff;
+    margin: 0 2rem;
+  }
+
+  .block-supreme {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 100px;
+  }
+
+  .block_mat-grid-list {
+    width: 60%;
+    margin: 0;
+    padding: 0%;
+  }
+
+  .block_total-cost {
+    width: 40%;
+  }

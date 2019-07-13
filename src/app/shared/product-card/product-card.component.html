@@ -1,0 +1,20 @@
+<div class="div__product">
+  <div>
+    <img class="img__product" src="./assets/default-img.svg" alt="">
+  </div>
+  <div class="mat-grid-tile__data">
+    <span class="subtitle__product">{{ prod.description }}</span>
+    <div class="quantity_products">
+      <span class="price__product">${{ prod.unitPrice }}</span>
+      <div class="amount-combo">
+        <mat-icon class="mat-icon__remove_circle" (click)="reduceAmount()">remove_circle</mat-icon>
+        <mat-form-field>
+          <input (change)="onInputChange($event)" matInput min=0 [max]="maxAmount" type="number" [(ngModel)]="prod.amount" class="input__products">
+        </mat-form-field>
+        <mat-icon class="mat-icon__add_circle" (click)="addAmount()">add_circle</mat-icon>
+        <mat-icon class="mat-icon__shopping-cart" *ngIf="!showDelete" (click)="addProduct()">add_shopping_cart</mat-icon>
+        <mat-icon class="mat-icon__shopping-cart red" *ngIf="showDelete" (click)="deleteProduct()">remove_shopping_cart</mat-icon>
+      </div>
+    </div>
+  </div>
+</div>

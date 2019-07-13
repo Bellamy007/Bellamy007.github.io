@@ -1,0 +1,60 @@
+<div class="row nav-bar">
+  <img src="../assets/logosoda.svg" alt="" class="img__coca">
+  <div class="nav-shopping-cart" [ngClass]="showShoppingCart ? 'hide' : ''">
+    <button (click)="toggleShoppingCart()" mat-mini-fab class="mat-mini-fab__shopping-cart">
+      <mat-icon matBadge="{{ counter }}" matBadgeColor="warn" class="mat-icon__shop">shopping_cart</mat-icon>
+    </button>
+  </div>
+</div>
+
+<div class="subheader">
+  <span class="subheader-span">Destapa la felicidad</span>
+</div>
+
+<form class="example-form">
+  <mat-grid-list cols="3" rowHeight="120px" [gutterSize]="'1rem'">
+    <mat-grid-tile *ngFor="let prod of products let i = index">
+      <app-product-card [prod]="prod" (add)="addProd($event)"></app-product-card>
+  </mat-grid-tile> 
+</mat-grid-list>
+{{ shoppingCart | json}}
+</form>
+
+
+<div class="bg-overlay" [ngClass]="showShoppingCart ? '' : 'hide'">
+</div>
+<div class="shopping-cart-overlay" [ngClass]="showShoppingCart ? '' : 'overlay-close'">
+  <div style="margin:26px">
+    <div class="row nav-bar">
+        <div class="nav-shopping-cart">
+          <button (click)="toggleShoppingCart()" mat-raised-button class="button__back">
+            Seguir comprando
+          </button>
+        </div>
+      </div>
+      <!-- <div class="subheader">
+      </div> -->
+      <form class="example-form">
+        <div class="block-supreme">
+          <div class="block_mat-grid-list">
+              <mat-grid-list cols="2" rowHeight="120px" [gutterSize]="'1rem'">
+                  <mat-grid-tile *ngFor="let prod of getShoppingCartAsArray()">
+                        <app-product-card [showDelete]="true" [prod]="prod" (delete)="delProduct($event)"></app-product-card>
+                  </mat-grid-tile> 
+                </mat-grid-list>
+          </div>
+          <div class="block_total-cost">
+            <span>Resumen de orden</span>
+          </div>
+        </div>
+      </form>
+      </div>
+</div>
+
+
+
+
+
+
+<!-- 
+ -->

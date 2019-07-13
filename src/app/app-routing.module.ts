@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 const routes: Routes = [
   {
-    path: 'shopping-cart',
-    component: ShoppingCartComponent
+    path: '',
+    loadChildren: () => import('./client/client.module').then(m => m.ClientModule)
   }
 ];
 

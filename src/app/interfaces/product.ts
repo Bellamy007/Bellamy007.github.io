@@ -3,4 +3,5 @@ export interface Product {
     description: string;
     sku: string;
     unitPrice: number;
+    amount?: number;
 }
