@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductCardComponent } from './product-card/product-card.component';
+import { ProductCardOverlayComponent } from './product-card-overlay/product-card-overlay.component';
 import {MatButtonModule,
   MatCheckboxModule,
   MatToolbarModule,
@@ -12,7 +13,7 @@ import {MatBadgeModule} from '@angular/material/badge';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [ProductCardComponent],
+  declarations: [ProductCardComponent, ProductCardOverlayComponent],
   imports: [
     CommonModule,
     MatCheckboxModule,
@@ -35,7 +36,8 @@ import { FormsModule } from '@angular/forms';
     MatInputModule,
     MatBadgeModule,
     FormsModule,
-    ProductCardComponent
+    ProductCardComponent,
+    ProductCardOverlayComponent
   ]
 })
 export class SharedModule { }

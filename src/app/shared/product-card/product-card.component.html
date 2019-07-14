@@ -9,11 +9,14 @@
       <div class="amount-combo">
         <mat-icon class="mat-icon__remove_circle" (click)="reduceAmount()">remove_circle</mat-icon>
         <mat-form-field>
-          <input (change)="onInputChange($event)" matInput min=0 [max]="maxAmount" type="number" [(ngModel)]="prod.amount" class="input__products">
+          <input (change)="onInputChange($event)" matInput min=0 [max]="maxAmount" type="number"
+            [(ngModel)]="prod.amount" class="input__products">
         </mat-form-field>
         <mat-icon class="mat-icon__add_circle" (click)="addAmount()">add_circle</mat-icon>
-        <mat-icon class="mat-icon__shopping-cart" *ngIf="!showDelete" (click)="addProduct()">add_shopping_cart</mat-icon>
-        <mat-icon class="mat-icon__shopping-cart red" *ngIf="showDelete" (click)="deleteProduct()">remove_shopping_cart</mat-icon>
+        <mat-icon class="mat-icon__shopping-cart" *ngIf="!showDelete" (click)="addProduct()">add_shopping_cart
+        </mat-icon>
+        <mat-icon class="mat-icon__shopping-cart red" *ngIf="showDelete" (click)="deleteProduct()">remove_shopping_cart
+        </mat-icon>
       </div>
     </div>
   </div>

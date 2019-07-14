@@ -1,7 +1,7 @@
 .div__product {
-    background-color: rgb(255, 242, 242, .8);
+    background-color: rgb(255, 242, 242, 1);
     float: left;
-    width: 95%;
+    width: 90%;
     font-family: 'Quicksand', sans-serif;
     box-shadow: #333333;
     top: 0;
@@ -20,10 +20,13 @@
     border-radius: 0.8rem;
     transition: all 0.3s ease-in;
 
-    .img__product {
-      right: 3rem;
-      height: 80px;
-      margin: 0 1rem 0;
+    .img__product-container {
+      width: 20%;
+      .img__product {
+        right: 3rem;
+        height: 50px;
+        margin: 0 1rem 0;
+      }
     }
 
     .mat-grid-tile__data {
@@ -34,7 +37,7 @@
   
       .subtitle__product {
         font-weight: 600;
-        font-size: 1.2rem;
+        font-size: 1rem;
         margin: 2rem 0 1rem 0;
       }
   
@@ -46,7 +49,7 @@
         justify-content: space-evenly;
   
         .price__product {
-          font-size: 1.4em;
+          font-size: 1.4rem;
           color: #333333;
           transition: all 0.3s ease-out;
         }
@@ -107,22 +110,4 @@
     
   }
 
-  .div__product:hover {
-      background-color: #333333 !important;
-      color: #fff !important;
-      height: 100%;
-      width: 100%;
-      transition: all 0.3s ease-out;
-      .price__product {
-          color: #fff !important;
-          transition: all 0.3s ease-out;
-      }
-      mat-icon {
-          color: #8C8EFF;
-          cursor:pointer;
-      }
-      input {
-          color: #fff;
-      }
-  }
 

@@ -16,6 +16,7 @@ export class ProductListComponent implements OnInit {
   counter: number;
   shoppingCart: Map<number, Product>;
   showShoppingCart = false;
+  totalCost;
 
   ngOnInit() {
     this.getProducts();
@@ -41,6 +42,8 @@ export class ProductListComponent implements OnInit {
     // console.log(this.shoppingCart);
     // console.log('ee', this._shoppingCart.shoppingCart);
     return Array.from(this.shoppingCart.values());
+    console.log(Array.from(this.shoppingCart.values()));
+    this.totalCost = 0;
   }
 
   addProd(element: Product): void {
