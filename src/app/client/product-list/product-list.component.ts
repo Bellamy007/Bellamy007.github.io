@@ -28,12 +28,14 @@ export class ProductListComponent implements OnInit {
   }
   constructor(private _productService: ProductsService, private _shoppingCart: ShoppingCartService) {
     this.counter = 0;
+    
   }
 
   getProducts() {
     this._productService.getProducts().subscribe(
       (res) => {
         this.products = res;
+        // console.log(res);
       }
     );
   }
@@ -41,12 +43,29 @@ export class ProductListComponent implements OnInit {
   getShoppingCartAsArray(): Array<Product> {
     // console.log(this.shoppingCart);
     // console.log('ee', this._shoppingCart.shoppingCart);
-    return Array.from(this.shoppingCart.values());
-    console.log(Array.from(this.shoppingCart.values()));
+     const newShoppingCart = Array.from(this.shoppingCart.values());
     this.totalCost = 0;
+    var i = 0;
+    while (i < newShoppingCart.length) {
+      this.totalCost += newShoppingCart[i].amount * newShoppingCart[i].unitPrice;
+      i++;
+    }
+    return Array.from(this.shoppingCart.values());
+  }
+  getTotal() {
+    const newShoppingCart = Array.from(this.shoppingCart.values());
+    console.log(newShoppingCart);
+    this.totalCost = 0;
+    var i = 0;
+    while (i < newShoppingCart.length) {
+    this.totalCost += newShoppingCart[i].amount * newShoppingCart[i].unitPrice;
+    i++;
+    }
+    return this.totalCost
   }
 
   addProd(element: Product): void {
+    element.productFinalPrice = element.amount * element.unitPrice; //Esto no sirve
     this._shoppingCart.addProduct(element);
   }
 
@@ -57,7 +76,5 @@ export class ProductListComponent implements OnInit {
   toggleShoppingCart(): void {
     this.showShoppingCart = !this.showShoppingCart;
   }
-
-
 
 }

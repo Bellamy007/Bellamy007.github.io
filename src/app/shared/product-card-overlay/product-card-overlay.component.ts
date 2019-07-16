@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Product } from 'src/app/interfaces/product';
+import { ShoppingCartService } from '../../services/shopping-cart.service';
 
 @Component({
   selector: 'app-product-card-overlay',
@@ -14,7 +15,7 @@ export class ProductCardOverlayComponent implements OnInit {
   @Output() delete: EventEmitter<Product> = new EventEmitter<Product>();
   @Output() add: EventEmitter<Product> = new EventEmitter<Product>();
 
-  constructor() { }
+  constructor( private _shoppinCart: ShoppingCartService) { }
 
   ngOnInit() {
   }
@@ -58,6 +59,4 @@ export class ProductCardOverlayComponent implements OnInit {
     this.add.emit(newProd);
     this.prod.amount = 0;
   }
-
-
 }

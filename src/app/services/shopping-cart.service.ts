@@ -34,7 +34,7 @@ export class ShoppingCartService {
   public addProduct(product: Product): void {
     if (this.shoppingCart.has(product.productId)) {
       const foundProduct = this.shoppingCart.get(product.productId);
-      foundProduct.amount = Math.max(this._maxAmount, foundProduct.amount + product.amount);
+      foundProduct.amount = Math.min(foundProduct.amount + product.amount, this._maxAmount);
     } else {
       this.shoppingCart.set(product.productId, product);
     }
