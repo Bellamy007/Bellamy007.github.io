@@ -56,16 +56,15 @@ export class ProductListComponent implements OnInit {
     const newShoppingCart = Array.from(this.shoppingCart.values());
     console.log(newShoppingCart);
     this.totalCost = 0;
-    var i = 0;
+    let i = 0;
     while (i < newShoppingCart.length) {
-    this.totalCost += newShoppingCart[i].amount * newShoppingCart[i].unitPrice;
-    i++;
+      this.totalCost += newShoppingCart[i].amount * newShoppingCart[i].unitPrice;
+      i++;
     }
-    return this.totalCost
+    return this.totalCost;
   }
 
   addProd(element: Product): void {
-    element.productFinalPrice = element.amount * element.unitPrice; //Esto no sirve
     this._shoppingCart.addProduct(element);
   }
 

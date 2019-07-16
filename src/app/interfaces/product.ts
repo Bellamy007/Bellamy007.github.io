@@ -4,5 +4,4 @@ export interface Product {
     sku: string;
     unitPrice: number;
     amount?: number;
-    productFinalPrice?: number;
 }

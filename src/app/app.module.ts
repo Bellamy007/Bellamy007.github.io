@@ -12,12 +12,10 @@ import {MatButtonModule,
         MatGridListModule,
         MatInputModule} from '@angular/material';
 import {MatBadgeModule} from '@angular/material/badge';
-import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ShoppingCartComponent,
   ],
   imports: [
     BrowserModule,
